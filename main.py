@@ -1,16 +1,9 @@
-from product_manager import ProductManager
-from product import Product
+from cart import Cart
 
-manager = ProductManager()
+cart = Cart()
+cart.add_to_cart(manager.products[0])
+cart.add_to_cart(manager.products[1])
+cart.add_to_cart(manager.products[2])
 
-
-manager.add_product(Product("Laptop", 3000, 5))
-manager.add_product(Product("Mouse", 100, 10))
-manager.add_product(Product("Keyboard", 200, 7))
-
-
-manager.display_products()
-
-
-print(f"Total inventory value: {manager.total_value()} RON")
-
+cart.display_cart()
+print(f"Total cart value: {cart.total_cart_value()} RON")
